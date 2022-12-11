@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tennisbana</title>
+<link rel="stylesheet" href="TennisklubbCSS.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/272c8db375.js" crossorigin="anonymous"></script>
+ </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="Index.html"><img src ="Bilder/Hem.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="Index.html">Hem</a></li>
+            <li><a href="Öppettider.html">Boknings tider</a></li>
+            <li><a href="Om oss.html">Om oss</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>     
+<div class="text-box"> 
+  <h1>Välkommen till Tennisklubben!</h1>
+  <p>Vi har dem finaste banorna någonsin, du får inte tag på finare! Boka nu. Eller inte, <br>spelar inte så stor roll. Vi får pengar ändå!</p>
+  <a href="Bokabana.html" class="bana-btn">Boka bana</a>
+  <a href="Bokabastu.html" class="bastu-btn">Boka Bastu</a>  
+</div> 
+<footer class="footer">
+  <div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lectus tellus, cursus vel tristique quis, egestas vitae urna.<br> Sed viverra nibh quis nulla finibus aliquet. Integer mattis molestie dui, nec fermentum tellus tempor sit amet. In hac habitasse platea dictumst. Quisque ultricies nisl in nisi porttitor maximus.</p>
+  </div>
+</footer> 
+    </section>
+    <!---Java Script koden till liten skärm.-->
+  <script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+      function hideMenu(){
+      navLinks.style.right = "-200px";
+    }
+  </script>
+  </body>
+</html>

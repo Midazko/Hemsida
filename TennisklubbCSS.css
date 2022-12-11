@@ -1,0 +1,202 @@
+ *{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+ }
+ .header{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(3, 1, 1, 0.8),rgba(3, 1, 1, 0.8)),url(bilder/tennis.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+ }
+ nav{  
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+ }
+ nav img {
+    width: 100px;
+ }
+ .nav-links{
+    flex: 1;
+    text-align: left;
+ }
+ .nav-links ul li{
+    list-style: none;   
+    display: inline-block;
+    padding: 30px;
+    position: relative;
+ }
+ .nav-links ul li a{
+    color: red;
+    text-decoration: none;
+    font-size: 20px;
+ }
+ .nav-links ul li::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: darkred;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+ }
+ .nav-links ul li:hover::after{
+    width: 100%;
+ }
+ .text-box{
+    width: 90%;
+    color: red;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+ }
+ .text-box h1{
+    font-size: 58px;
+ }
+ .text-box p{
+    margin: 10px 0 40px;
+    font-size: 15px;
+ }
+ .bana-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:red;
+    border:1px solid;
+    padding: 12px 34px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    right: 20px;
+ }
+ .bana-btn:hover{
+    border: 1px solid black;
+    background: rgb(0, 0, 0, 0.3);
+    transition: 0.5s;
+ }
+ .bastu-btn{
+    display: inline-block;
+    text-decoration: none;
+    color:red;
+    border:1px solid;
+    padding: 12px 34px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    left: 20px;
+ }
+ .bastu-btn:hover{
+    border: 1px solid black;
+    background: rgb(0, 0, 0, 0.3);
+    transition: 0.5s;
+
+ } 
+ nav .fa-solid{
+   display: none;
+ }
+ .footer{
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:40px;
+   background:rgba(0, 0, 0, 0.7);
+   opacity: 0.8;
+   color: red;
+   display: flex;
+   justify-content: flex;
+   padding: 0px 0px 10px 0px;
+ }   
+ p{
+   display: block;
+   margin-block-start: 1em;
+   margin-block-end: 1em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
+   font-size: 13px;
+ }
+  /*------ Öppettider Sida ------*/
+ .TextTid h1{
+   font-size: 50px;
+   color: red;
+   display: flex;
+   padding: 5% 43.5%;
+   justify-content: space-between;
+   align-items: center;
+}
+table, th, td {
+   height: 20%;
+   border: 1px solid black;
+   border-collapse: collapse;
+   padding: 2% 1%;
+   margin: center;
+   color: black;
+ }
+ table{
+   margin: auto;
+   width: 60%;
+   padding: 10px;
+ }
+  /*------ Öppettider Sida Avslut ------*/
+
+ @media(max-width: 700px){
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-links ul li a{
+        font-size: 20px;
+        color:red;
+     }
+     .nav-links ul li{ 
+      display: block;
+     }
+     .nav-links{
+      position: absolute;
+      background: rgb(0, 0, 0, 0.8); 
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      right: -200px;
+      text-align: left;
+      z-index: 2;
+      transition: 0.2s;
+     }
+     nav .fa-solid{
+      display: block;
+      color:red;
+      margin: 10px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    .nav-links ul{
+      padding: 30px;
+    }
+    p{
+      font-size: 1px;
+    }
+      /*----- Öppettider Responsiv -----*/
+     .TextTid h1{
+      font-size: 30px;
+      display: flex;
+      padding: 5% 37%;
+      justify-content: space-between;
+      align-items: center;
+   }
+    table, th, td {
+      height: 60%;
+      border: 1px solid red;
+      border-collapse: collapse;
+      padding: 5% 0.3%;
+      color: red;
+      font-size: 5px;
+ }
+
+}
+ 
+ 

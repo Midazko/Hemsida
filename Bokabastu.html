@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Bokabanan</title>
+<link rel="stylesheet" href="BokabanaCSS.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/272c8db375.js" crossorigin="anonymous"></script>
+ </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="Index.html"><img src ="Bilder/Hem.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="Index.html">Hem</a></li>
+            <li><a href="Öppettider.html">Boknings tider</a></li>
+            <li><a href="Om oss.html">Om oss</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+       </nav> 
+        <div class="container" style="height: 780px;">
+          <form>
+            <h1>Bastu Bokning:</h1>
+            <div class="input-group">
+              <label>Fulla namn:</label>
+              <input type="text" placeholder="Var god skriv ditt namn" id="Namn" onkeyup="valideringnamn()">
+              <span id="Namn-fel"></span>
+            </div>
+      
+            <div class="input-group">
+              <label>Email adress:</label>
+              <input type="email" placeholder="Skriv din email adress" id="Email" onkeyup="valideringemail()">
+              <span id="Email-fel"></span>
+            </div>
+      
+            <div class="input-group">
+              <label>Datum:</label>
+              <input type="date" id="datum" min="2022-12-01" onchange="valideringdatum()">
+              <span id="Datum-fel"></span>
+            </div>
+
+            <div class="input-group">
+              <label>Klockan:</label>
+              <input type="time" id="tid" min="09:00" max="22:00" onchange="valideringtid()">
+              <span id="Tid-fel"></span>
+            </div>
+
+            <div class="input-group">
+              <label>Antal personer?:</label>
+              <input id="antal" type=number min=0 max=10 placeholder="1-10" onchange="valideringantal()"> 
+              <span id="Antal-fel"></span>
+            </div> 
+      
+            <div class="input-group">
+              <label>Extra önskemål:</label>
+              <textarea rows="5" placeholder="Skriv ditt meddelande"></textarea>
+            </div>
+          <button onclick="return valideringform()">
+            <div>
+              <a href="Index.html" class="Knapp">Boka</a>
+            </div>
+          </button>
+          <span id="Fel"></span>
+        </form>
+        </div>
+            <!--Script delen -->
+            <script src="scriptbokningbastu.js"></script>  
+       <footer class="footer">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lectus tellus, cursus vel tristique quis, egestas vitae urna.<br> Sed viverra nibh quis nulla finibus aliquet. Integer mattis molestie dui, nec fermentum tellus tempor sit amet. In hac habitasse platea dictumst. Quisque ultricies nisl in nisi porttitor maximus.</p>
+        </div>
+      </footer> 
+    </section>
+    <!---Java Script koden till liten skärm.-->
+  <script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+      function hideMenu(){
+      navLinks.style.right = "-200px";
+    }
+  </script>
+  </body>
+</html>

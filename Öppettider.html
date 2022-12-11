@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tennisbana</title>
+<link rel="stylesheet" href="TennisklubbCSS.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/272c8db375.js" crossorigin="anonymous"></script>
+ </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="Index.html"><img src ="Bilder/Hem.png" alt=""></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="Index.html">Hem</a></li>
+            <li><a href="">Boknings tider</a></li>
+            <li><a href="Om oss.html">Om oss</a></li>
+          </ul>
+        </div>
+        <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="TextTid">
+        <h1>Öppettider!</h1>
+      </div>
+      <table style="width: 50%">
+        <div>
+          <col span="8" style="background-color: rgba(255, 255, 255)">
+        </div>
+        <tbody>
+          <tr>
+            <th>Banor:</th>
+            <th>Måndag:</th>
+            <th>Tisdag:</th>
+            <th>Onsdag:</th>
+            <th>Torsdag:</th>
+            <th>Fredag:</th>
+          </tr>
+          <tr>
+            <th>Bana 1</th>
+            <th>09:00-21:00</th>
+            <th>09:00-21:00</th>
+            <th>12:00-23:00</th>
+            <th>12:00-23:00</th>
+            <th>12:00-23:00</th>
+          </tr>
+          <tr>
+            <th>Bana 2</th>
+            <th>09:00-21:00</th>
+            <th>09:00-21:00</th>
+            <th>12:00-23:00</th>
+            <th>12:00-23:00</th>
+            <th>12:00-23:00</th>
+          </tr>
+          <tr>
+            <th>Bana 3</th>
+            <th>09:00-21:00</th>
+            <th>09:00-21:00</th>
+            <th>12:00-23:00</th>
+            <th>12:00-23:00</th>
+            <th>12:00-23:00</th>
+          </tr>
+        </tbody>
+      </table> 
+      <footer class="footer">
+        <div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lectus tellus, cursus vel tristique quis, egestas vitae urna.<br> Sed viverra nibh quis nulla finibus aliquet. Integer mattis molestie dui, nec fermentum tellus tempor sit amet. In hac habitasse platea dictumst. Quisque ultricies nisl in nisi porttitor maximus.</p>
+        </div>
+      </footer>     
+    </section>
+    <!---Java Script koden till liten skärm.-->
+  <script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+      navLinks.style.right = "0";
+    }
+      function hideMenu(){
+      navLinks.style.right = "-200px";
+    }
+  </script>
+  </body>
+</html>
